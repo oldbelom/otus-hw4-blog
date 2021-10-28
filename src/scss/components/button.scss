@@ -1,0 +1,20 @@
+@import '.././variables.scss';
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  border: 2px solid $black;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $black;
+  transition: 0.3s;
+
+  &--active,
+  &:hover {
+    color: #fff;
+    background-color: $black;
+  }
+}

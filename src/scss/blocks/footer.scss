@@ -1,0 +1,30 @@
+.footer {
+  margin-top: 3rem;
+  padding: 3rem 4rem;
+  background-color: $black;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a.footer__nav-item {
+    color: #fff;
+
+    &:hover {
+      color: $gray;
+    }
+
+    &::after {
+      content: '/';
+      color: #fff;
+      margin: 0 1rem;
+      font-size: 1rem;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}
