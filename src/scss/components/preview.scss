@@ -1,4 +1,4 @@
-@import ".././variables.scss";
+@import ".././variables";
 
 .preview {
   display: flex;
@@ -13,7 +13,7 @@
     width: 200px;
     height: 100px;
     margin-right: 2rem;
-    background-image: url(../../assets/note-preview.jpg);
+    background-image: url("../../assets/note-preview.jpg");
     background-size: contain;
     background-repeat: no-repeat;
   }
