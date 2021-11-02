@@ -1,0 +1,14 @@
+.note {
+  &__img {
+    width: 400px;
+    height: 310px;
+    float: left;
+    background-image: url("../../assets/note.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,36 @@
+.subscribe {
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 4rem;
+    margin: 5rem 0;
+    background-color: #f4f4f4;
+    border-radius: 0.2rem;
+  }
+
+  &__text {
+    margin-right: 3rem;
+    white-space: nowrap;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
+  &__info {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  &__controls {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__btn.button {
+    margin-left: 0.5rem;
+    border-width: 1px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,37 @@
+@import ".././variables";
+
+.preview {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid $gray;
+  border-radius: 0.2rem;
+
+  &__img {
+    width: 200px;
+    height: 100px;
+    margin-right: 2rem;
+    background-image: url("../../assets/note-preview.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    margin-bottom: 0.5rem;
+  }
+
+  &__link {
+    color: $black;
+    text-decoration: underline;
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}

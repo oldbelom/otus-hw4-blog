@@ -1,0 +1,14 @@
+.feedback {
+  &__item {
+    margin-top: 2rem;
+  }
+
+  &__info {
+    font-weight: bold;
+  }
+
+  &__btn {
+    background-color: #fff;
+    cursor: pointer;
+  }
+}
