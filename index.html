@@ -58,6 +58,36 @@
               </form>
             </div>
           </section>
+          <section class="slider container">
+            <div class="my-slider">
+              <ul data-carousel-list>
+                <li data-carousel-item>
+                  <img
+                    src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1174&q=80"
+                    alt=""
+                  />
+                </li>
+                <li data-carousel-item>
+                  <img
+                    src="https://images.unsplash.com/photo-1614314107768-6018061b5b72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                    alt=""
+                  />
+                </li>
+                <li data-carousel-item>
+                  <img
+                    src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80"
+                    alt=""
+                  />
+                </li>
+                <li data-carousel-item>
+                  <img
+                    src="https://images.unsplash.com/photo-1595709578434-1f1aaa2a2c01?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80'"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+          </section>
           <section class="latest container">
             <h3 class="title">Последние посты</h3>
             <article class="preview">
@@ -101,5 +131,10 @@
         </nav>
       </footer>
     </div>
+    <script>
+      const el = document.querySelector(".my-slider");
+      const slider = new Carousel(el);
+      slider.startInfiniteSlide();
+    </script>
   </body>
 </html>

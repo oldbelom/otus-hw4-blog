@@ -61,3 +61,14 @@ a {
   margin-top: 2rem;
   font-size: 2rem;
 }
+
+.slider {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.slider .carousel {
+  width: 800px;
+  height: 600px;
+}
