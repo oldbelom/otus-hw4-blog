@@ -1,6 +1,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const {
+  HtmlWebpackSkipAssetsPlugin,
+} = require("html-webpack-skip-assets-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -21,19 +24,33 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "feedback.html",
       template: "./feedback.html",
+      excludeAssets: [/.js/],
     }),
     new HtmlWebpackPlugin({
       filename: "list.html",
       template: "./list.html",
+      excludeAssets: [/.js/],
     }),
     new HtmlWebpackPlugin({
       filename: "note.html",
       template: "./note.html",
+      excludeAssets: [/.js/],
     }),
     new MiniCssExtractPlugin(),
+    new HtmlWebpackSkipAssetsPlugin(),
   ],
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
       {
         test: /\.(sc|c)ss$/,
         use: [
