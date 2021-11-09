@@ -27,6 +27,8 @@ export default function Carousel(element) {
   const maxOffset = carouselList.scrollWidth;
   let offset = 0;
 
+  let infiniteSlide;
+
   const slideRight = () => {
     offset += carouselItemWidth;
     carouselList.style.transition = "left ease-in-out 1s";
@@ -47,8 +49,15 @@ export default function Carousel(element) {
     carouselList.style.left = `${-offset}px`;
   };
 
-  btnRight.addEventListener("click", slideRight);
-  btnLeft.addEventListener("click", slideLeft);
+  btnRight.addEventListener("click", () => {
+    clearInterval(infiniteSlide);
+    slideRight();
+  });
+
+  btnLeft.addEventListener("click", () => {
+    clearInterval(infiniteSlide);
+    slideLeft();
+  });
 
   this.removeButtons = () => {
     btnRight.style.display = "none";
@@ -60,6 +69,6 @@ export default function Carousel(element) {
   this.slideLeft = slideLeft;
 
   this.startInfiniteSlide = () => {
-    setInterval(slideRight, 4000);
+    infiniteSlide = setInterval(slideRight, 4000);
   };
 }

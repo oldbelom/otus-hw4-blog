@@ -32,6 +32,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
     "html-webpack-plugin": "^5.4.0",
+    "html-webpack-skip-assets-plugin": "^1.0.3",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.3",
     "mini-css-extract-plugin": "^2.4.3",
